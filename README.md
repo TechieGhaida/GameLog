@@ -70,13 +70,3 @@ gamelog/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details
-
-## Acknowledgments
-
-- [Next.js](https://nextjs.org) for the amazing framework
-- [Tailwind CSS](https://tailwindcss.com) for styling
-- [Orbitron](https://fonts.google.com/specimen/Orbitron) and [Audiowide](https://fonts.google.com/specimen/Audiowide) fonts
-- All contributors who have helped improve this project
