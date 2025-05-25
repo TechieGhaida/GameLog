@@ -1,6 +1,6 @@
 # Lootra - Your Digital Gaming Journey
 
-Lootra is a modern web application that helps gamers track their gaming journey, achievements, and build their digital gaming legacy. With a sleek cyberpunk design and intuitive interface, GameLog makes it easy to manage and showcase your gaming progress.
+Lootra is a modern web application that helps gamers track their gaming journey, achievements, and build their digital gaming legacy. With a sleek design and intuitive interface, Lootra makes it easy to manage and showcase your gaming progress.
 
 ## Features
 
