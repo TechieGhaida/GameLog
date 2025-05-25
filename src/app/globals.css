@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 100% 6%;
+    --foreground: 210 40% 98%;
+    --card: 220 20% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 220 20% 8%;
+    --secondary: 220 14.3% 11%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 14.3% 11%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 216 12.2% 16%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+    --radius: 0.75rem;
+
+    /* Custom GameLog Colors */
+    --gamelog-cyan: 176 100% 50%;
+    --gamelog-blue: 220 100% 60%;
+    --gamelog-purple: 260 100% 70%;
+    --gamelog-dark: 220 30% 4%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  .dark {
+    --background: 210 100% 6%;
+    --foreground: 210 40% 98%;
+    --card: 220 20% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 220 20% 8%;
+    --secondary: 220 14.3% 11%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 14.3% 11%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 216 12.2% 16%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, hsl(var(--gamelog-dark)) 0%, hsl(220 40% 8%) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glow-border {
+    position: relative;
+    border-radius: 12px;
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(220 25% 10%) 100%);
+    border: 1px solid hsl(var(--gamelog-cyan) / 0.3);
+    box-shadow:
+      0 0 20px hsl(var(--gamelog-cyan) / 0.1),
+      inset 0 1px 0 hsl(var(--gamelog-cyan) / 0.2);
+  }
+
+  .glow-border:hover {
+    border-color: hsl(var(--gamelog-cyan) / 0.5);
+    box-shadow:
+      0 0 30px hsl(var(--gamelog-cyan) / 0.2),
+      inset 0 1px 0 hsl(var(--gamelog-cyan) / 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gamelog-dark)) 0%,
+      hsl(var(--gamelog-purple) / 0.2) 25%,
+      hsl(var(--gamelog-blue) / 0.3) 50%,
+      hsl(var(--gamelog-cyan) / 0.2) 75%,
+      hsl(var(--gamelog-dark)) 100%
+    );
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px hsl(var(--gamelog-cyan) / 0.5);
+  }
+
+  .btn-glow {
+    background: linear-gradient(135deg, hsl(var(--gamelog-cyan)) 0%, hsl(var(--gamelog-blue)) 100%);
+    border: 1px solid hsl(var(--gamelog-cyan));
+    box-shadow:
+      0 0 15px hsl(var(--gamelog-cyan) / 0.3),
+      inset 0 1px 0 hsl(255 255% 255% / 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .btn-glow:hover {
+    box-shadow:
+      0 0 25px hsl(var(--gamelog-cyan) / 0.5),
+      inset 0 1px 0 hsl(255 255% 255% / 0.3);
+    transform: translateY(-1px);
+  }
+
+  .hero-grid-bg {
+    background-image:
+      linear-gradient(rgba(34,211,238,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,211,238,0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: 0 0, 0 0;
+  }
+}
+
+.cyber-font {
+  font-family: 'Orbitron', 'Arial Black', 'Arial', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cyber-alt-font {
+  font-family: 'Audiowide', 'Orbitron', 'Arial Black', 'Arial', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
